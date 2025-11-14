@@ -1,0 +1,133 @@
+/* ===== VARIABLES ===== */
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --text: #e6edf3;
+  --accent: #3b82f6;
+  --nav-bg: #111827;
+}
+
+body.light-mode {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1b1f23;
+  --accent: #0078d7;
+  --nav-bg: #e2e8f0;
+}
+
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: var(--nav-bg);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.toggle-btn {
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  animation: fadeUp 0.7s ease;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+li {
+  background: rgba(255, 255, 255, 0.05);
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background: var(--nav-bg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+}
