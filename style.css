@@ -96,13 +96,10 @@ h2 {
 }
 
 /* link style */
-.section-link {
+.view-link {
   text-decoration: none;
   color: var(--accent);
-}
-
-.section-link:hover {
-  opacity: 0.8;
+  font-size: 14px;
 }
 
 li {
