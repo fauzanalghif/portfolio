@@ -95,6 +95,16 @@ h2 {
   color: var(--accent);
 }
 
+/* link style */
+.section-link {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.section-link:hover {
+  opacity: 0.8;
+}
+
 li {
   background: rgba(255, 255, 255, 0.05);
   margin: 10px 0;
